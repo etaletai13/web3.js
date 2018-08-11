@@ -37,11 +37,11 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "build": "gulp",
-    "watch": "gulp watch",
-    "lint": "jshint *.js lib",
-    "test": "mocha; jshint *.js lib",
-    "test-coveralls": "istanbul cover _mocha -- -R spec && cat coverage/lcov.info | coveralls --verbose"
+    "build": "yarn gulp",
+    "watch": "yarn gulp watch",
+    "lint": "yarn jshint *.js lib",
+    "test": "yarn mocha && yarn jshint *.js lib",
+    "test-coveralls": "yarn istanbul cover _mocha -- -R spec && cat coverage/lcov.info | yarn coveralls --verbose"
   },
   "repository": {
     "type": "git",
@@ -84,6 +84,5 @@
       "url": "https://github.com/obscuren"
     }
   ],
-
   "license": "LGPL-3.0"
 }
