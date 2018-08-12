@@ -1,16 +1,15 @@
 language: node_js
 node_js:
-  - "4.1"
-  - "4.0"
+  - "8.0"
+yarn:
+  - "1.5.0"
 before_script:
-  - npm install
-  - npm install jshint
   - export DISPLAY=:99.0 
   - sh -e /etc/init.d/xvfb start
 script:
-   - "jshint *.js lib"
+  - yarn jshint *.js lib
 after_script:
-  - npm run-script build
-  - npm run-script test-coveralls
-  - cd test/node && npm install && node app.js
+  - yarn build
+  - yarn test-coveralls
+  - cd test/node && yarn  && node app.js
 
